@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, redirect
+from flask import Flask, request, render_template, redirect, url_for
 from mysql.connector import Error, connect
 import db_utils
 
@@ -22,10 +22,15 @@ def login():
 
     
     if email_match_result:
-        return "Login successful"
+        return redirect(url_for("dashboard"))
     else:
         return "The email and/or password you have entered are incorrect. Please try again."
 
+
+
+@app.route("/dashboard", methods=["GET", "POST"])
+def dashboard():
+    return render_template("dashboard.html")
 
 
 if __name__ == "__main__":
