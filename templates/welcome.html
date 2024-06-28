@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='welcome.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/welcome.css') }}">
 </head>
 <body>
-    <header><h1>Welcome to Fitness Buddy</h1></header>
+    <header>
+        <h1>Welcome to Fitness Buddy</h1>
+    </header>
+
+    <section id="login-section">
+        <h2>Log in</h2>
+        <form action="/login" method="POST">
+            <label for="username"> Username: </label>
+            <input type="text" required class="login-info" name="username" id="username" placeholder="e.g. example@gmail.com">
+                        
+                
+            <label for="password">Password: </label>
+            <input type="text" required class="login-info" name="password" id="password">
+
+            <!-- <button type="submit">Submit</button> -->
+
+            <input type="submit" value="Login" />
+        </form>
+    </section>
     
     <script src="{{ url_for('static', filename='js/welcome.js') }}"></script>
 </body>

@@ -22,4 +22,4 @@ connection_to_SQL(sql_config.mydb._host,sql_config.mydb._user, sql_config.mydb._
 
 mycursor = sql_config.mydb.cursor()
 
-
+mycursor.execute("USE fitness_buddy")
