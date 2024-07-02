@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
 </head>
 <body>
     <header><h1>Fitness Buddy Dashboard</h1></header>
-    
-    <form action="/dashboard" method="POST">
-    </form>
+    <h2 id="todays-date"></h2>
+    <section id="exercise-diary"></section>
+
+    <section id="food-diary"></section>
 
     <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
 </body>
